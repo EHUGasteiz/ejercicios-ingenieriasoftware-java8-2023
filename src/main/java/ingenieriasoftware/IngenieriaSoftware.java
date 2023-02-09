@@ -40,7 +40,11 @@ public class IngenieriaSoftware {
      * @return devuelve la lista de alumnos que no han aprobado la asignatura
      */
     public List<Alumno> getAlumnosSuspendidos() {
-        return null;
+        // TODO: Ejercicio 7
+        return lMatriculados
+                .stream()
+                .filter(Alumno::haSuspendido)
+                .toList();
     }
 
     /**
